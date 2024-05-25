@@ -27,9 +27,8 @@ router.post('/like', async (req, res) => {
 });
 // Add user Liked Property id
 
-
 // Remove user Liked Property id
-router.post('/unlike', async (req, res) => {
+router.post('/dislike', async (req, res) => {
     try {
         const { buyer_ID, property_ID } = req.body;
 

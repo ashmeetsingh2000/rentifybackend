@@ -125,17 +125,4 @@ router.delete('/delete/:id', async (req, res) => {
 });
 // Delete Property of a seller
 
-// Like or Unline Property
-router.put('/:id', async (req, res) => {
-    const id = req.params.id;
-    const updateFields = req.body;
-    try {
-        await properties.findByIdAndUpdate(id, updateFields, { new: true });
-        return res.status(200).json({ message: 'property updated successfully' });
-    } catch (error) {
-        res.status(500).json({ message: 'Rentify server error' });
-    }
-})
-// Like or Unline Property
-
 module.exports = router;
